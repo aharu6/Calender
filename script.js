@@ -48,4 +48,21 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   const today = new Date();
   generateCalender(today.getFullYear(), today.getMonth());
+
+  const month = document.getElementById("month");
+  month.textContent = today.getMonth() + 1;
+  //prev month
+  const prev = document.getElementById("preview");
+  prev.addEventListener("click", function () {
+    today.setMonth(today.getMonth() - 1);
+    generateCalender(today.getFullYear(), today.getMonth());
+    month.textContent = today.getMonth() + 1;
+  });
+  //next month
+  const next = document.getElementById("next");
+  next.addEventListener("click", function () {
+    today.setMonth(today.getMonth() + 1);
+    generateCalender(today.getFullYear(), today.getMonth());
+    month.textContent = today.getMonth() + 1;
+  });
 });
