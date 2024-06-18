@@ -2,7 +2,14 @@ h1 {
   color: red;
   font-size: 50px;
 }
-#month{
+#dayHead {
+  margin: 2rem;
+  display: flex;
+}
+.day-of-week {
+  width: 10rem;
+}
+#month {
   margin: 1rem;
 }
 #calender {

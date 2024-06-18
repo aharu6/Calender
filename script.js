@@ -1,4 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const calnederheader = document.getElementById("calendar-header");
+  const dayWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  dayWeek.forEach((day) => {
+    const th = document.createElement("th");
+    th.classList.add("day-of-week");
+    th.textContent = day;
+    calnederheader.appendChild(th);
+  });
+
   const calender = document.getElementById("calender");
   const click = document.getElementById("click");
   let clickCount = 0;
