@@ -22,12 +22,12 @@ document.addEventListener("DOMContentLoaded", function () {
     //空白セルのための前の月の日数
     const firstWeekDay = firstDay.getDay();
     for (let i = 0; i < firstWeekDay; i++) {
-      const emptycell = document.createElement("div");
+      const emptycell = document.createElement("th");
       calender.appendChild(emptycell);
     }
     //日付セル
     for (let date = 1; date <= lastDay.getDate(); date++) {
-      const cell = document.createElement("div");
+      const cell = document.createElement("th");
       calender.appendChild(cell);
       cell.textContent = date;
       cell.classList.add("cell");
